@@ -1,17 +1,8 @@
 <template>
   <div class="card">
-    <div v-if="isOperationTypeInput(operationType)" class="top-right-green">
-      <div class="circle">
-        <img src="../../public/img/arrow-down.png" alt="">
-      </div>
-    </div>
-    <div v-else class="top-right-red">
-      <div class="circle">
-        <img src="../../public/img/arrow-up.png" alt="">
-      </div>
-    </div>
+    <TransactionStatusComponent :operator="operationType" />
     <div class="center">
-      <div class="number">{{amount}}</div>
+      <div class="number">{{ amount }}</div>
     </div>
     <div class="bottom-left">
       <p>R$</p>
@@ -19,21 +10,20 @@
   </div>
 </template>
 <script>
+import TransactionStatusComponent from "./TransactionStatus.vue";
 export default {
+  components: {
+    TransactionStatusComponent,
+  },
   props: {
     amount: {
-        type: Number,
-        default: 0
+      type: Number,
+      default: 0,
     },
     operationType: {
-        type: String
-    }
+      type: String,
+    },
   },
-  methods: {
-    isOperationTypeInput(value) {
-        return value == "input"
-    }
-  }
 };
 </script>
 <style scoped>
@@ -44,54 +34,24 @@ html {
 .card {
   position: relative;
   font-family: "Courier New", Courier, monospace;
-  max-width: 3.125rem; 
+  max-width: 3.125rem;
   width: 3.125rem;
   height: 2.34375rem;
-  background-color: #EFF4FF; 
-  border-radius: 0.7rem; 
-  padding: 0.625rem; 
-}
-
-.top-right-green {
-  position: absolute;
-  top: 0.2rem;
-  right: 0.3125rem; 
-  background-color: #E6FFBE;
+  background-color: #eff4ff;
   border-radius: 0.7rem;
-  width: 1.25rem; 
-  height: 0.9375rem; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.top-right-red {
-  position: absolute;
-  top: 0.2rem; 
-  right: 0.3125rem;
-  background-color: #FFE4E4;
-  border-radius: 0.7rem; 
-  width: 1.25rem; 
-  height: 0.9375rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0.625rem;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 0.5rem; 
-}
-
-.circle img{
-    width: .5rem;
+  height: 0.5rem;
 }
 
 .number {
   font-size: 1rem;
-  margin-top: 2rem; 
+  margin-top: 2rem;
 }
 
 .bottom-left {
