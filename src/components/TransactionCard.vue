@@ -34,39 +34,41 @@ html {
 .card {
   position: relative;
   font-family: "Courier New", Courier, monospace;
-  max-width: 3.125rem;
-  width: 3.125rem;
-  height: 2.34375rem;
+  max-width: 5rem;
+  width: 5rem;
+  height: 5.6rem;
   background-color: #eff4ff;
-  border-radius: 0.7rem;
-  padding: 0.625rem;
+  border-radius: 1.6rem;
+  padding: 1.5rem;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 0.5rem;
+  height: 1.2rem;
 }
 
 .number {
-  font-size: 1rem;
-  margin-top: 2rem;
+  font-size: 2.4rem;
+  margin-top: 5rem;
+  color: #525151;
 }
 
 .bottom-left {
   position: absolute;
   bottom: 0;
-  left: 0.5rem;
-  width: 3.125rem;
-  height: 0.9375rem;
+  left: 1.2rem;
+  width: 9rem;
+  height: 2.2rem;
   display: flex;
   justify-content: left;
   align-items: center;
+  color: #525151;
 }
 
 .bottom-left p {
-  font-size: 0.5rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 </style>

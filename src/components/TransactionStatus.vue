@@ -28,12 +28,12 @@ export default {
 <style scoped>
 .top-right-green {
   position: absolute;
-  top: 0.2rem;
-  right: 0.3125rem;
+  top: 0.4rem;
+  right: 0.5rem;
   background-color: #e6ffbe;
-  border-radius: 0.7rem;
-  width: 1.25rem;
-  height: 0.9375rem;
+  border-radius: 1.6rem;
+  width: 3rem;
+  height: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,17 +41,17 @@ export default {
 
 .top-right-red {
   position: absolute;
-  top: 0.2rem;
-  right: 0.3125rem;
+  top: 0.4rem;
+  right: 0.5rem;
   background-color: #ffe4e4;
-  border-radius: 0.7rem;
-  width: 1.25rem;
-  height: 0.9375rem;
+  border-radius: 1.6rem;
+  width: 3rem;
+  height: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .circle img {
-  width: 0.5rem;
+  width: 1.2rem;
 }
 </style>
