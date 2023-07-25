@@ -1,15 +1,13 @@
 <template>
-  <TransactionCardComponent :amount="4450.00" :operationType="'input'" />
-  <br>
-  <TransactionCardComponent :amount="27" :operationType="'output'"/>
+  <FinancialBoardView />
   <router-view />
 </template>
 <script>
-import TransactionCardComponent from "./components/TransactionCard.vue";
+import FinancialBoardView from './views/FinancialBoard.vue';
 export default {
   components: {
-    TransactionCardComponent,
-  },
+    FinancialBoardView
+  }
 };
 </script>
 <style>
