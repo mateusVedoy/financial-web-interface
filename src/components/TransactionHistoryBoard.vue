@@ -35,10 +35,10 @@ export default {
 </script>
 <style scoped>
 .board {
-  box-shadow: 0.05rem 0.06rem rgba(82, 81, 81, 0.4);
-  width: 45rem;
+  width: 56rem;
   height: 30rem;
   border-radius: 1.6rem;
+  background-color: #ffff;
 }
 .top {
   width: 100%;
@@ -65,7 +65,7 @@ export default {
 }
 .search-container {
   margin-top: 1rem;
-  margin-left: 1.5rem;
+  margin-left: 5rem;
   display: flex;
   align-items: center;
   border-radius: 1rem;

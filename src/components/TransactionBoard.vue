@@ -4,16 +4,12 @@
       <h1>Last Transactions</h1>
     </div>
     <div class="content">
-      <TransactionCardComponent :amount="4750.0" :operationType="'input'" />
-      <TransactionCardComponent :amount="27" :operationType="'output'" />
-      <TransactionCardComponent :amount="4750.0" :operationType="'input'" />
-      <TransactionCardComponent :amount="27" :operationType="'output'" />
-      <TransactionCardComponent :amount="4750.0" :operationType="'input'" />
-      <TransactionCardComponent :amount="27" :operationType="'output'" />
-      <TransactionCardComponent :amount="4750.0" :operationType="'input'" />
-      <TransactionCardComponent :amount="27" :operationType="'output'" />
-      <TransactionCardComponent :amount="4750.0" :operationType="'input'" />
-      <TransactionCardComponent :amount="27" :operationType="'output'" />
+      <div v-for="transaction in transactions" :key="transaction.id">
+        <TransactionCardComponent
+          :amount="transaction.amount"
+          :operationType="transaction.type"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +20,11 @@ export default {
   components: {
     TransactionCardComponent,
   },
+  props: {
+    transactions: {
+      type: Object,
+    },
+  },
 };
 </script>
 <style scoped>
@@ -31,20 +32,21 @@ export default {
   margin-bottom: 1.5em;
 }
 .title h1 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-family: "Courier New", Courier, monospace;
-  color: #898D93;
+  color: #898d93;
 }
 .board {
-  box-shadow: .05rem .05rem rgba(82, 81, 81,.1);
-  padding: 1.2em;
+  padding: 1.2em 1.2rem 3rem 1.2rem;
   border-radius: 1.2rem;
-  width: 21em;
+  width: 30em;
+  min-height: 50rem;
+  background-color: #ffff;
 }
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 </style>

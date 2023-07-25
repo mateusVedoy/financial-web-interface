@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="amount">
-      <p>{{balance}}R$</p>
+      <p>{{ balance }}R$</p>
     </div>
     <div class="bottom">
       <div class="btn-deposit"><h3>Deposit</h3></div>
@@ -25,26 +25,30 @@ export default {
   components: {
     BalanceStatusComponent,
   },
-  props: {
-    inputAmount: {
-      type: Number,
+  data() {
+    let inputAmount = null;
+    let outputAmount = null;
+    let balance = null;
+  },
+  methods: {
+    async getBalanceAnalytics() {
+      this.inputAmount = 1569;
+      this.outputAmount = 1124;
+      this.balance = 1259;
     },
-    outputAmount: {
-      type: Number,
-    },
-    balance: {
-      type: String,
-    },
+  },
+  async beforeMount() {
+    await this.getBalanceAnalytics();
   },
 };
 </script>
 <style scoped>
 .card {
-  width: 45rem;
+  width: 56rem;
   height: 20rem;
-  box-shadow: .07rem .07rem rgba(82, 81, 81,.1);
   border-radius: 1.5rem;
   box-sizing: border-box;
+  background-color: #ffff;
 }
 .top {
   width: 100%;
@@ -58,9 +62,10 @@ export default {
 .top h2 {
   font-family: "Courier New", Courier, monospace;
   color: #898d93;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .status {
+  margin-left: 5rem;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -85,33 +90,33 @@ export default {
   gap: 5rem;
 }
 .bottom > div {
-    width: 15rem;
-    height: 5rem;
-    border-radius: 1.6rem;
-    display: flex;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 1.6rem;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 .bottom > div > h3 {
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
 }
 .btn-deposit {
-    background-color: #8694C7;
-    color: #DFDFDF;
+  background-color: #8694c7;
+  color: #dfdfdf;
 }
 .btn-withdraw {
-    background-color: #E6E7EA;
-    color: #8694C7;
+  background-color: #e6e7ea;
+  color: #8694c7;
 }
 .btn-deposit:hover {
-    transition: 0.2s;
-    background-color: #9DABDB;
-    color: #F1F3F5;
+  transition: 0.2s;
+  background-color: #9dabdb;
+  color: #f1f3f5;
 }
 .btn-withdraw:hover {
-    transition: 0.2s;
-    background-color: #E8EAEE;
-    color: #A2AFDF;
+  transition: 0.2s;
+  background-color: #e8eaee;
+  color: #a2afdf;
 }
 </style>

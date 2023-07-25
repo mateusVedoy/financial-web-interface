@@ -34,9 +34,9 @@ html {
 .card {
   position: relative;
   font-family: "Courier New", Courier, monospace;
-  max-width: 5rem;
-  width: 5rem;
-  height: 5.6rem;
+  max-width: 8rem;
+  width: 8rem;
+  height: 7rem;
   background-color: #eff4ff;
   border-radius: 1.6rem;
   padding: 1.5rem;
