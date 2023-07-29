@@ -25,20 +25,19 @@ export default {
   components: {
     BalanceStatusComponent,
   },
-  data() {
-    let inputAmount = null;
-    let outputAmount = null;
-    let balance = null;
-  },
-  methods: {
-    async getBalanceAnalytics() {
-      this.inputAmount = 1569;
-      this.outputAmount = 1124;
-      this.balance = 1259;
+  props: {
+    inputAmount: {
+      type: Number,
+      default: 0,
     },
-  },
-  async beforeMount() {
-    await this.getBalanceAnalytics();
+    outputAmount: {
+      type: Number,
+      default: 0,
+    },
+    balance: {
+      type: Number,
+      default: 0,
+    },
   },
 };
 </script>
