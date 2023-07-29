@@ -4,13 +4,13 @@
       <LastTransactionsView class="float-right"/>
     </div>
     <div class="right-section">
-      <BalanceCardView class="inner-card" />
+      <BalanceToPeriodView class="inner-card" />
       <TransactionHistoryView class="inner-card" />
     </div>
   </div>
 </template>
 <script>
-import BalanceCardView from "@/components/BalanceCard.vue";
+import BalanceToPeriodView from "./BalanceToPeriod.vue";
 import LastTransactionsView from "./LastTransactions.vue";
 import TransactionHistoryView from "./TransactionHistory.vue";
 
@@ -18,7 +18,7 @@ export default {
   name: "FinancialBoardView",
   components: {
     LastTransactionsView,
-    BalanceCardView,
+    BalanceToPeriodView,
     TransactionHistoryView,
   },
 };
@@ -35,7 +35,7 @@ export default {
   display: flex;
   justify-content: space-around;
   background-color: #f6f6f6;
-  padding: 2rem;
+  padding: 1rem;
 }
 .container > div {
   align-items: center;
