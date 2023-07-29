@@ -9,24 +9,18 @@ export default {
   components: {
     TransactionBoardComponent,
   },
-  props: {
-    lastTransactions: {
-      type: Object,
-    },
-  },
   data() {
     return {
       last_transactions: null,
     };
   },
   methods: {
-    //consulta fake simulando as chamadas finais e reais
+    //TODO: gerar endpoint de last transactions
     async getLastTransactions() {
       const request = await fetch(
-        "https://webhook.site/cd3bad25-5920-4029-90e1-95c175da80e8"
+        "http://127.0.0.1:8081/api/finances/operation/find/all"
       );
-      const data = await request.json();
-      console.log(data);
+      const {data} = await request.json();
       this.last_transactions = data;
     },
   },
