@@ -28,7 +28,7 @@ export default {
   },
   props: {
     transactionHistoryValues: {
-      type: Object
+      type: Array
     },
   },
 };
@@ -37,8 +37,13 @@ export default {
 .board {
   width: 56rem;
   height: 30rem;
+  display: block;
   border-radius: 1.6rem;
   background-color: #ffff;
+  overflow: hidden;
+}
+.table{
+  height: 80%;
 }
 .top {
   width: 100%;
