@@ -103,10 +103,12 @@ export default {
 .btn-deposit {
   background-color: #8694c7;
   color: #dfdfdf;
+  cursor: pointer;
 }
 .btn-withdraw {
   background-color: #e6e7ea;
   color: #8694c7;
+  cursor: pointer;
 }
 .btn-deposit:hover {
   transition: 0.2s;
